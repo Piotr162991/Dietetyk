@@ -1,0 +1,103 @@
+
+/* Carousel Container Styling */
+.slick-slider {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #1976d2;
+}
+
+/* Individual User Card Styling */
+.user-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* User Details Styling */
+.users-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.users-poster {
+    width: 80px;
+    height: 80px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.users-name h4,
+.users-gender h4,
+.users-goal h4,
+.users-activity-level h4,
+.users-height-cm h4,
+.users-weight-kg h4 {
+    color: #333;
+    font-weight: 600;
+    margin: 5px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.users-name h4 {
+    font-size: 1.1em;
+    color: #1976d2;
+}
+
+.users-gender h4,
+.users-goal h4,
+.users-activity-level h4,
+.users-height-cm h4,
+.users-weight-kg h4 {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Slick Arrow Styling */
+.slick-prev,
+.slick-next {
+    font-size: 24px;
+    color: #1976d2;
+    z-index: 1;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    color: #0d47a1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .user-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-card {
+        width: 100%;
+    }
+}
