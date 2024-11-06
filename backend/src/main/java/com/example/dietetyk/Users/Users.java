@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
-import com.example.dietetyk.Dieta;
+import com.example.dietetyk.Diet.Diet;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,5 +33,5 @@ public class Users {
     private String activity_level;
     private String goal;
     @DocumentReference
-    private List<Dieta> dietaIds;
+    private List<Diet> dietaIds;
 }

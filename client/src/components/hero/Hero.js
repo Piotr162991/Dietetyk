@@ -3,8 +3,8 @@ import './Hero.css';
 
 const Hero=()=> {
   return (
-    <div>
-        <h1>Witam</h1>
+    <div className='home'>
+        <h1>Planowanie diet dla twoich podopiecznych</h1>
     </div>
   )}
 

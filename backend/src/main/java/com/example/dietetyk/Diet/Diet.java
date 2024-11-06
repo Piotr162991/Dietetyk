@@ -1,4 +1,4 @@
-package com.example.dietetyk;
+package com.example.dietetyk.Diet;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -8,12 +8,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document(collection = "diets")
+@Document(collection = "diet")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Dieta {
+public class Diet {
     @Id
     private ObjectId id;
     private String name;

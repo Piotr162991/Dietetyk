@@ -1,6 +1,9 @@
-div {
+div .home {
     /* Background pattern from Toptal Subtle Patterns */
-    background-image: url("D:\java\prze\my-app\src\img\header-bg7.png");
-    height: 400px;
+    background-image: url("D:\java\prze\my-app\Dietetyk\client\src\img\header-bg7.png");
+    background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
     width: 100%;
+    height: 600px;
  }
