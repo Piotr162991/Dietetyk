@@ -7,11 +7,16 @@ import Home from './components/home/Home';
 import Layout from './components/Layout';
 import UsersCarousel from './components/slickslides/UsersCarousel'
 import DietsCarousel from './components/dietSlider/DietsCarousel'
+import UserDiet from './components/userDiet/UserDiet';
 
 
 function App() {
 
   const [users, setUsers]=useState();
+  const [diets, setDiets]=useState();
+  const [diet, setDiet]=useState();
+
+
 
     const getUsers= async()=>{
       try{
@@ -32,7 +37,7 @@ getUsers();
 
 },[])
 
-const [diets, setDiets]=useState();
+
 
 const getDiets= async()=>{
   try{
@@ -48,17 +53,31 @@ const getDiets= async()=>{
 
 }
 useEffect(()=>{
-getDiets();
+getDiets();},[])
 
+const getUserData = async (usermane) =>{
 
-},[])
+  try{
+    const response = await api.get('/api/v1/users/${username}');
+    console.log(response.data);
+    const singleUser =response.data;
+    setUsers(singleUser);
+    setDiets(singleUser.diets);
+
+  }catch(err){
+    console.log(err);
+    
+  }
+
+}
+
   return (
     <div className="App">
       
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route path='/' element={<Home users={users} />}></Route>
-          
+          <Route path='/Diets/:username' element={<UserDiet getUserData = {getUserData} diets ={diets} setDiets= {setDiets}/>}></Route>
         </Route>
       </Routes>
       <UsersCarousel users = {users}/>

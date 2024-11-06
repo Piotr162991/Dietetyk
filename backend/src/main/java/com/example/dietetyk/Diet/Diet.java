@@ -23,4 +23,14 @@ public class Diet {
     private int protein_percentage;
     private int carb_percentage;
     private int fat_percentage;
+
+    public Diet(String name, String description, String created_at, int target_calories, int protein_percentage, int carb_percentage, int fat_percentage){
+        this.name=name;
+        this.description=description;
+        this.created_at=created_at;
+        this.target_calories=target_calories;
+        this.protein_percentage=protein_percentage;
+        this.carb_percentage=carb_percentage;
+        this.fat_percentage=fat_percentage;
+    }
 }
